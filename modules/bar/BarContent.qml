@@ -1,15 +1,17 @@
 import QtQuick
 import QtQuick.Layouts
 import Quickshell
+import Quickshell.Hyprland
 import qs.modules.bar
 import qs.modules.common
+import qs.modules.common.widgets
 import qs.services
 
 Item {
     id: root
 
     // Background panel
-    Rectangle {
+    Pill {
         id: barBackground
 
         anchors.fill: parent
@@ -29,6 +31,10 @@ Item {
             right: parent.right
             topMargin: 16
         }
+
+        Workspaces {
+            id: workspaces
+        }
     }
 
     // Middle section
@@ -43,7 +49,6 @@ Item {
             id: clockWidget
 
             anchors.centerIn: parent
-            vertical: true
         }
     }
 

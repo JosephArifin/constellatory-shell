@@ -9,6 +9,7 @@ Singleton {
 
     options: QtObject {
         property QtObject time
+        property QtObject bar
 
         time: QtObject {
             property string format: "h:mm AP"
@@ -16,6 +17,14 @@ Singleton {
             property string dateFormat: "dddd, MMMM d"
             property bool secondPrecision: false
             property bool twelveHour: true
+        }
+
+        bar: QtObject {
+            property QtObject workspaces
+
+            workspaces: QtObject {
+                property int shown: 5
+            }
         }
     }
 }
